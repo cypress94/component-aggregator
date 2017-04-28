@@ -8,10 +8,7 @@ services:
 install:
   - docker run -d --name tomcat tomcat
   - docker run --name some-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kurs_aggr -d postgres
-<<<<<<< HEAD
   - mvn compile
-=======
->>>>>>> 07b0e31cc13abbc387947ed0ec3892371618df4b
   - docker build -t my_app_component_aggregator src/main/docker
 
 script:
