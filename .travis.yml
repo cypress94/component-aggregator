@@ -9,6 +9,7 @@ install:
   - docker run -d --name tomcat tomcat
   - docker run --name some-postgres -e POSTGRES_HOST=localhost -e POSTGRES_PORT=5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=kurs_aggr -d postgres:9.3
   - mvn compile
+  - cp target/component-aggregator-1.0.0-SNAPSHOT.jar src/main/docker
   - docker build -t my_app_component_aggregator src/main/docker
 
 script:
